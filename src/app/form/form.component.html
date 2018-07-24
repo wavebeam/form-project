@@ -1,6 +1,22 @@
+<div>
+  <h2>Remote Access Module</h2>
+  <h4>Location: </h4>
+</div>
 
 <div>
-  <label><span>Machine Name: </span>
+  <label><span>Location : </span> <br>
+    <select [(ngModel)] = "selectedLocation">
+      <option *ngFor = "let data of com"
+        [value] = "data.location"
+        [attr.selected] = "selectedLocation==data.location ? true : null">{{data.location}}
+      </option>
+    </select>
+  </label>
+</div>
+
+
+<div>
+  <label><span>Machine Name : </span> <br>
     <select [(ngModel)] = "selectedMachine">
       <option *ngFor = "let data of com"
         [value] = "data.cname"
@@ -10,21 +26,73 @@
   </label>
 </div>
 
-<div *ngIf = "selectedMachine">
+<div>
+
+
+<h3> Computer Log History </h3>
+
+  <table>
+    <tr>
+      <th>Machine Name</th>
+      <th>Username</th>
+      <th>Display Name</th>
+      <th>RAM</th>
+      <th>CPU</th>
+      <th>IP Address</th>
+      <th>Manufacturer</th>
+      <th>Model #: </th>
+      <th>Serial #:</th>
+      <th>HD Size</th>
+      <th>Location</th>
+    </tr>
+    <tr>
+        <td>
+          <ul>
+            <li *ngFor="let data of com">
+              {{data.cname}}
+            </li>
+          </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          <ul>
+            <li *ngFor="let data of com">
+              {{data.displayname}}
+            </li>
+          </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          <ul>
+            <li *ngFor="let data of com">
+              {{data.username}}
+            </li>
+          </ul>
+        </td>
+    </tr>
+
+  </table>
+
+<h3> Spiceworks Tickets </h3>
+
+  <table>
+    <tr>
+      <th>Ticket #</th>
+      <th>Created By: </th>
+      <th>Summary</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Category</th>
+      <th>Department</th>
+      <th>Assigned to</th>
+      <th>Create Date</th>
+      <th>Close Date</th>
+      <th>Priority</th>
+    </tr>
+
+
+  </table>
 
 </div>
-
-<table>
-  <tr>
-    <th>Ticket #</th>
-    <th>Created By: </th>
-    <th>Summary</th>
-    <th>Description</th>
-    <th>Status</th>
-    <th>Category</th>
-    <th>Department</th>
-    <th>Assigned to</th>
-    <th>Create Date</th>
-    <th>Close Date</th>
-    <th>Priority</th>
-  </tr>

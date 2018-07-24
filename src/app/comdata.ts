@@ -12,6 +12,7 @@ export const Comdata: Com[] = [
     model: 'p7-1380t',
     serial: '2MDXXXXXXX',
     drive: 0,
+    location: 'Anderson'
   },
   {
     cname: 'A-ADM-1016',
@@ -24,6 +25,7 @@ export const Comdata: Com[] = [
     model: 'p7-1420t',
     serial: '2MDXXXXXXX',
     drive: 932,
+    location: 'Anderson'
   },
   {
     cname: 'A-ADM-1018',
@@ -36,6 +38,8 @@ export const Comdata: Com[] = [
     model: 'p7-1420t',
     serial: '2MDXXXXXXX',
     drive: 0,
+    location: 'Holtz'
+
   },
   {
     cname: 'A-ADM-1019',
@@ -48,6 +52,8 @@ export const Comdata: Com[] = [
     model: 'p7-1420t',
     serial: '2MDXXXXXXX',
     drive: 932,
+    location: 'Holtz'
+
   },
   {
     cname: 'A-ADM-1021',
@@ -60,6 +66,7 @@ export const Comdata: Com[] = [
     model: 'p7-1420t',
     serial: '2MDXXXXXXX',
     drive: 0,
+    location: 'Willard'
   },
   {
     cname: 'A-ADM-1030',
@@ -72,5 +79,6 @@ export const Comdata: Com[] = [
     model: 'HD Pro3500 Series',
     serial: 'MXLXXXXXXX',
     drive: 466,
+    location: 'King',
   }
 ];

@@ -17,7 +17,8 @@ export class FormComponent implements OnInit {
 
   ticket: Ticket[];
   com: Com[];
-  selectedmachine: string;
+  selectedMachine: string;
+  selectedLocation: string;
 
 
   ngOnInit() {

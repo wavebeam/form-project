@@ -9,4 +9,5 @@ export class Com {
   model: string;
   serial: string;
   drive: number;
+  location: string;
 }
