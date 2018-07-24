@@ -1,0 +1,30 @@
+
+<div>
+  <label><span>Machine Name: </span>
+    <select [(ngModel)] = "selectedMachine">
+      <option *ngFor = "let data of com"
+        [value] = "data.cname"
+        [attr.selected] = "selectedMachine==data.cname ? true : null">{{data.cname}}
+      </option>
+    </select>
+  </label>
+</div>
+
+<div *ngIf = "selectedMachine">
+
+</div>
+
+<table>
+  <tr>
+    <th>Ticket #</th>
+    <th>Created By: </th>
+    <th>Summary</th>
+    <th>Description</th>
+    <th>Status</th>
+    <th>Category</th>
+    <th>Department</th>
+    <th>Assigned to</th>
+    <th>Create Date</th>
+    <th>Close Date</th>
+    <th>Priority</th>
+  </tr>
