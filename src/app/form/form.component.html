@@ -1,6 +1,5 @@
 <div>
   <h2>Remote Access Module</h2>
-  <h4>Location: </h4>
 </div>
 
 <div>
@@ -26,53 +25,37 @@
   </label>
 </div>
 
-<div>
+<h3> OR </h3>
+
+  <div>
+    <form [(ngModel)] = "selectedTicket">
+      Ticket #: <input type="number" >
+    </form>
+  </div>
+  <h1>{{selectedTicket}}</h1>
 
 
-<h3> Computer Log History </h3>
-
+<div *ngIf ="selectedMachine">
+  <h3> Remote Access History </h3>
   <table>
     <tr>
-      <th>Machine Name</th>
-      <th>Username</th>
-      <th>Display Name</th>
-      <th>RAM</th>
-      <th>CPU</th>
-      <th>IP Address</th>
-      <th>Manufacturer</th>
+      <th>Machine Name: </th>
+      <th>Username: </th>
+      <th>eID: </th>
+      <th>Department: </th>
+      <th>Location: </th>
+      <th>Memory: </th>
+      <th>CPU: </th>
+      <th>IP Address: </th>
       <th>Model #: </th>
-      <th>Serial #:</th>
-      <th>HD Size</th>
-      <th>Location</th>
+      <th>Serial #: </th>
     </tr>
     <tr>
-        <td>
-          <ul>
-            <li *ngFor="let data of com">
-              {{data.cname}}
-            </li>
-          </ul>
-        </td>
+      <td *ngFor = "let data of com">
+        {{selectedMachine.toString()}}
+        {{com.indexOf(selectedMachine.toString())}}
+      </td>
     </tr>
-    <tr>
-        <td>
-          <ul>
-            <li *ngFor="let data of com">
-              {{data.displayname}}
-            </li>
-          </ul>
-        </td>
-    </tr>
-    <tr>
-        <td>
-          <ul>
-            <li *ngFor="let data of com">
-              {{data.username}}
-            </li>
-          </ul>
-        </td>
-    </tr>
-
   </table>
 
 <h3> Spiceworks Tickets </h3>
@@ -91,8 +74,88 @@
       <th>Close Date</th>
       <th>Priority</th>
     </tr>
-
-
+    <tr>
+      <td *ngFor = "let data of ticket">
+          {{data.ticketN}}
+      </td>
+      <td>
+        <ul>
+          <li *ngFor="let data of ticket">
+            {{data.createdBy}}
+          </li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li *ngFor="let data of ticket">
+            {{data.summary}}
+          </li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li *ngFor="let data of ticket">
+            {{data.descr}}
+          </li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li *ngFor="let data of ticket">
+            {{data.status}}
+          </li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li *ngFor="let data of ticket">
+            {{data.category}}
+          </li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li *ngFor="let data of ticket">
+            {{data.status}}
+          </li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li *ngFor="let data of ticket">
+            {{data.category}}
+          </li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li *ngFor="let data of ticket">
+            {{data.assign}}
+          </li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li *ngFor="let data of ticket">
+            {{data.createDate}}
+          </li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li *ngFor="let data of ticket">
+            {{data.closeDate}}
+          </li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li *ngFor="let data of ticket">
+            {{data.priority}}
+          </li>
+        </ul>
+      </td>
+    </tr>
   </table>
 
 </div>

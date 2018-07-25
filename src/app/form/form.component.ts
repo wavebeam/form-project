@@ -17,6 +17,7 @@ export class FormComponent implements OnInit {
 
   ticket: Ticket[];
   com: Com[];
+  selectedComIndex: Com;
   selectedMachine: string;
   selectedLocation: string;
 
