@@ -36,7 +36,7 @@
 
 
 <div *ngIf ="selectedMachine">
-  <h3> Remote Access History </h3>
+  <h3> Machine Information </h3>
   <table>
     <tr>
       <th>Machine Name: </th>
@@ -51,111 +51,75 @@
       <th>Serial #: </th>
     </tr>
     <tr>
-      <td *ngFor = "let data of com">
+      <td>
         {{selectedMachine.toString()}}
-        {{com.indexOf(selectedMachine.toString())}}
+      </td>
+      <td>
+        {{ticket.indexOf(selectedMachine.toString())}}
+        <ul>
+          {{ticket}}
+        </ul>
+      </td>
+      <td>
+
+      </td>
+      <td>
+
       </td>
     </tr>
   </table>
 
-<h3> Spiceworks Tickets </h3>
+<h3> User Tickets </h3>
 
   <table>
     <tr>
       <th>Ticket #</th>
       <th>Created By: </th>
-      <th>Summary</th>
-      <th>Description</th>
       <th>Status</th>
       <th>Category</th>
-      <th>Department</th>
       <th>Assigned to</th>
-      <th>Create Date</th>
-      <th>Close Date</th>
+      <th>Create Data</th>
       <th>Priority</th>
+      <th>Department</th>
     </tr>
-    <tr>
-      <td *ngFor = "let data of ticket">
-          {{data.ticketN}}
+    <tr *ngFor = "let data of ticket">
+      <td>
+        {{data.ticketN}}
       </td>
       <td>
-        <ul>
-          <li *ngFor="let data of ticket">
-            {{data.createdBy}}
-          </li>
-        </ul>
+        {{data.createdBy}}
       </td>
       <td>
-        <ul>
-          <li *ngFor="let data of ticket">
-            {{data.summary}}
-          </li>
-        </ul>
+        {{data.status}}
       </td>
       <td>
-        <ul>
-          <li *ngFor="let data of ticket">
-            {{data.descr}}
-          </li>
-        </ul>
+        {{data.category}}
       </td>
       <td>
-        <ul>
-          <li *ngFor="let data of ticket">
-            {{data.status}}
-          </li>
-        </ul>
+        {{data.assign}}
       </td>
       <td>
-        <ul>
-          <li *ngFor="let data of ticket">
-            {{data.category}}
-          </li>
-        </ul>
+        {{data.createDate}}
       </td>
       <td>
-        <ul>
-          <li *ngFor="let data of ticket">
-            {{data.status}}
-          </li>
-        </ul>
+        {{data.priority}}
       </td>
       <td>
-        <ul>
-          <li *ngFor="let data of ticket">
-            {{data.category}}
-          </li>
-        </ul>
-      </td>
-      <td>
-        <ul>
-          <li *ngFor="let data of ticket">
-            {{data.assign}}
-          </li>
-        </ul>
-      </td>
-      <td>
-        <ul>
-          <li *ngFor="let data of ticket">
-            {{data.createDate}}
-          </li>
-        </ul>
-      </td>
-      <td>
-        <ul>
-          <li *ngFor="let data of ticket">
-            {{data.closeDate}}
-          </li>
-        </ul>
-      </td>
-      <td>
-        <ul>
-          <li *ngFor="let data of ticket">
-            {{data.priority}}
-          </li>
-        </ul>
+        {{data.department}}
       </td>
     </tr>
   </table>
+
+  <div>
+    <h3> Description </h3>
+    <a *ngFor = "let data of ticket">
+      {{data.descr}}
+    </a>
+  </div>
+
+  <h3> Status: </h3>
+  <a *ngFor = "let data of ticket">
+      {{data.status}}
+  </a>
 
 </div>

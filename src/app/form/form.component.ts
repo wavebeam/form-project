@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ComService } from '../com.service';
 import { Com } from '../comclass';
+import { Comdata } from '../comdata';
+import { Ticketdata } from '../ticketdata';
 import { TicketService } from '../ticket.service';
 import { Ticket } from '../ticketclass';
-
+// set com: comdata[];
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -17,6 +19,7 @@ export class FormComponent implements OnInit {
 
   ticket: Ticket[];
   com: Com[];
+  selectedTicket: number;
   selectedComIndex: Com;
   selectedMachine: string;
   selectedLocation: string;
