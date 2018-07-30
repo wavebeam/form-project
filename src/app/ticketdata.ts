@@ -8,11 +8,12 @@ export const Ticketdata: Ticket[] = [
     descr: ['This ticket was created automatically for alert 19390'],
     status: 'closed',
     category: 'Software - Other',
-    department: 'AMD',
+    department: 'ADM',
     assign: 'Ellery Barnes',
     createDate: '2016-07-01 @ 02:25 AM',
     closeDate: '2016-07-01 @ 01:29 PM',
-    priority: 'Med'
+    priority: 'Med',
+    eID: '8242xxxx1'
   },
   {
     ticketN: 7067,
@@ -33,7 +34,8 @@ export const Ticketdata: Ticket[] = [
     assign: 'James Barnes',
     createDate: '2016-07-01 @ 08:10 AM',
     closeDate: '2016-07-01 @ 08:29 AM',
-    priority: 'Med'
+    priority: 'Med',
+    eID: '8242xxxx2'
   },
   {
     ticketN: 7068,
@@ -61,7 +63,8 @@ export const Ticketdata: Ticket[] = [
     assign: 'Ellery Barnes',
     createDate: '2016-07-01 @ 09:29 AM',
     closeDate: '2016-07-01 @ 11:52 AM',
-    priority: 'Med'
+    priority: 'Med',
+    eID: '8242xxxx3'
   },
   {
     ticketN: 7069,
@@ -81,7 +84,39 @@ export const Ticketdata: Ticket[] = [
     assign: 'James Barnes',
     createDate: '2016-07-01 @ 10:03 AM',
     closeDate: '2016-07-12 @ 12:19 PM',
-    priority: 'Med'
+    priority: 'Med',
+    eID: '8242xxxx4'
+  },
+  {
+    ticketN: 7070,
+    createdBy: 'user2',
+    summary: 'Talisma Complications',
+    descr: ['_______________________________ From: New Student Services',
+    'Date: Friday, July 1, 2016 at 10:32 AM',
+    'To: Nick ',
+    'Cc: Emily Lehning ',
+    'Subject: Talisma Complications',
+    'Good Morning!',
+    'I was just reaching out to you to let you know of an issue weve been facing with Talisma lately.',
+    'Weve had a few instances in which Campus Visits have been set up for a student, then somehow these',
+    'visits have gotten lost in the scheduling process and do not show up in scheduling or in end of day.',
+    'An example of this is student Jajuan M Mosley talisma ID 001-182-453. I figured I should bring this',
+    'to your attention in case there is an error within the system.',
+    'Thank you!',
+    'Maggie Griffith',
+    'New Student Services Ambassador',
+    '09 Anderson Hall | Kansas State Unversity',
+    '785.532.6318 | nss@k-state.edu',
+    'http://www.k-state.edu/admissions/ (http://www.k-state.edu/admissions/)"',
+    ],
+    status: 'open',
+    category: 'Talisma',
+    department: 'NSS',
+    assign: 'Nicholas Austin',
+    createDate: '2018-04-04 @ 2:12PM',
+    closeDate: '2018-04-04 @ 3:09PM',
+    priority: 'High',
+    eID: '824xxxxx3'
   }
 ];
 

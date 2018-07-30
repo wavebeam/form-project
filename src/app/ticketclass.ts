@@ -10,4 +10,5 @@ export class Ticket {
   createDate: string;
   closeDate: string;
   priority: string;
+  eID: string;
 }
