@@ -1,8 +1,22 @@
+<div class="header-container indent1" id="header1">
+  <h2>href="logoaddress + font" K-State + ListIcon.png, [username]</h2>
+</div>
+
 <div>
   <h2>Remote Access Module</h2>
 </div>
 
-<div>
+<div class = "area">
+  <div class = "sidebar">
+    <ul>
+      <li>
+        Test
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="space displace">
   <label><span>Department : </span> <br>
     <select [(ngModel)] = "selectedDepartment">
       <option *ngFor = "let data of ticket"
@@ -14,7 +28,7 @@
 </div>
 
 
-<div>
+<div class="space">
   <label><span>Machine Name : </span> <br>
     <select [(ngModel)] = "selectedMachine">
       <option *ngFor = "let data of com"
@@ -25,7 +39,7 @@
   </label>
 </div>
 
-  <div>
+  <div class = "space">
     <form [(ngModel)] = "selectedTicket">
       Ticket #: <input type="number" >
     </form>

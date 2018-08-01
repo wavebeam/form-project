@@ -1,0 +1,59 @@
+.header-container {
+  padding: 20px 0px;
+  background: #512888;
+  color: #ffffff;
+
+}
+
+.bg-primary {
+  background-color: #512888;
+}
+
+.tableback {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+}
+
+.displace {
+  text-indent: 120px;
+}
+
+.space {
+  float:left;
+  width: 10%;
+}
+// https://codepen.io/JFarrow/pen/fFrpg
+
+.sidebar {
+  background: #212121;
+  border-right: 1px solid #e5e5e5;
+  position: absolute;
+  top:0px;
+  bottom:0;
+  height:100%;
+  left:0;
+  width: 120px;
+  overflow:hidden;
+  -webkit-transtion:width .05s linear;
+  transition:width .05s linear;
+  -webkit-transform:translateZ(0) scale (1,1);
+  z-index:1000;
+}
+
+.header {
+  background: #512888;
+  top: 120px;
+  height: 100%;
+  left: 0;
+  width: 100%;
+
+}
+
+.area {
+  float: left;
+  background: #e2e2e2;
+  width: 100%;
+  height: 100%;
+}

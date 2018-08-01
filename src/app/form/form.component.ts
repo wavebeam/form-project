@@ -28,6 +28,7 @@ export class FormComponent implements OnInit {
   selectedTicket: number;
   selectedMachine: string;
   selectedLocation: string;
+  selectedDepartment: string;
 
 
   ngOnInit() {
